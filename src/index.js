@@ -1,5 +1,5 @@
 import m from "mithril";
-import app from "./app"
+import App from "./app"
 const data = {
   note: "",
   lastModified: 0
