@@ -1,0 +1,22 @@
+@import "./colors.css";
+@import "./spacing.css";
+/**
+	* Global styles for the entire application.
+	* This should not contain only inheritable styles.
+  */
+:root {
+  font-family: "Helvetica Neue", arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+  color: var(--color);
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}

@@ -1,0 +1,24 @@
+:root {
+  --color: #444;
+  --background: #eceeff;
+  --header-color: #151726;
+  --radius: 8px;
+  --primary-2: #984f67;
+  --primary-dark: #4f3350;
+  --primary: #d87768;
+  --divider: #cccedf;
+  --secondary: #f9f871;
+  --sub-header: #eceeff;
+  --sub-header-color: #151726;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sub-header-color: #eeeeee;
+    --sub-header: #404153;
+    --divider: #404153;
+    --color: #dddddd;
+    --header-color: #ffffff;
+    --background: #151726;
+  }
+}

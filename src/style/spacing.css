@@ -1,0 +1,26 @@
+:root {
+  --margin-root: calc(50vw - 640px);
+  --width-root: 1280px;
+}
+
+@media (max-width: 1440px){
+  :root{
+    --margin-root: 160px;
+    --width-root: calc(100vw - calc(--margin-root * 2));
+  }
+}
+@media (max-width: 1280px){
+  :root{
+    --margin-root: 96px;
+  }
+}
+@media (max-width: 800px){
+  :root{
+    --margin-root: 32px;
+  }
+}
+@media (max-width: 600px){
+  :root{
+    --margin-root: 16px;
+  }
+}

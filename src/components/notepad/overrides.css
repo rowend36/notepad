@@ -1,0 +1,56 @@
+.ProseMirror-menubar {
+  height: 48px;
+  border: 1px solid var(--divider);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background: var(--sub-header);
+  color: var(--sub-header-color);
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0 8px;
+}
+.ProseMirror-menubar-wrapper {
+  height: 100%;
+}
+.ProseMirror-menuseparator {
+  height: 100%;
+  border-color: var(--divider);
+  margin: 0 8px;
+}
+.ProseMirror-menuseparator:nth-of-type(5) {
+  flex-grow: 1;
+}
+.ProseMirror-menu-active {
+  background: var(--primary);
+  color: white;
+}
+.ProseMirror {
+  height: calc(100% - 48px);
+  box-sizing: border-box;
+}
+.ProseMirror-menuitem {
+  margin-right: 4px;
+}
+.ProseMirror-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  min-width: 32px;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.ProseMirror {
+  flex-grow: 1;
+  padding: 8px;
+  outline: none;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  border: 1px solid var(--divider);
+  border-top: none;
+}

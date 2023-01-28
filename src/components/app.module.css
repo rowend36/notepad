@@ -1,0 +1,14 @@
+#app > main {
+  display: flex;
+  margin: 0 var(--margin-root);
+  min-height: calc(100vh - 3.5rem);
+  max-width: var(--width-root);
+  /* align-items: center; */
+  justify-content: center;
+}
+
+@media (max-width: 639px) {
+  #app > main {
+    margin: 0 2rem;
+  }
+}
