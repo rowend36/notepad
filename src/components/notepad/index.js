@@ -11,6 +11,7 @@ import "prosemirror-menu/style/menu.css";
 import "prosemirror-view/style/prosemirror.css";
 import initialContent from "./template.html";
 import "./overrides.css";
+import isCSR from "../../logic/is_csr";
 import { locationStore } from "../../logic/prosemirror_plugins/persist";
 import style from "./style.module.css";
 import { ACTION_SET_DOC_SIZE, useAppData } from "../../logic/app_data";
@@ -23,13 +24,13 @@ const mySchema = new Schema({
   marks: schema.spec.marks,
 });
 
-const initialDoc = ProseParser.fromSchema(mySchema).parse(new DOMParser().parseFromString(initialContent, "text/html"));
 const Notepad = () => {
   const ref = useRef();
   const dispatch = useAppData().dispatch;
   useEffect(() => {
-    if (ref.current) {
-      let state = EditorState.create({ schema });
+    if (isCSR && ref.current) {
+      const initialDoc = ProseParser.fromSchema(mySchema).parse(new DOMParser().parseFromString(initialContent, "text/html"));
+
       let view = new EditorView(ref.current, {
         state: EditorState.create({
           plugins: [

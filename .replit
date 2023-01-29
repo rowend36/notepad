@@ -1,9 +1,9 @@
 hidden=[".config"]
 
 # hosting is currently hardcoded for this language
-# [hosting]
-# route = "/"
-# directory= "/"
+[hosting]
+  route = "/dist/"
+  directory= "/dist/"
 
 [nix]
 channel = "stable-21_11"

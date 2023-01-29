@@ -6,7 +6,7 @@
 @media (max-width: 1440px){
   :root{
     --margin-root: 160px;
-    --width-root: calc(100vw - calc(--margin-root * 2));
+    --width-root: calc(100vw - calc(var(--margin-root) * 2));
   }
 }
 @media (max-width: 1280px){
