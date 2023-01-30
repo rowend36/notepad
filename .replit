@@ -2,14 +2,14 @@ hidden=[".config"]
 
 # hosting is currently hardcoded for this language
 [hosting]
-  route = "/dist/"
-  directory= "/dist/"
+route = "/"
+directory = "/static/"
 
 [nix]
 channel = "stable-21_11"
 
 [languages.html]
-pattern = "**/*.html"
+pattern = "src/*.html"
   [languages.html.languageServer]
 start = "vscode-html-language-server --stdio"
   [languages.html.languageServer.initializationOptions]
@@ -52,12 +52,12 @@ start = "vscode-html-language-server --stdio"
     server = "off"
 
 [languages.javascript]
-pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
+pattern = "src/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
   [languages.javascript.languageServer]
 start = "typescript-language-server --stdio"
 
 [languages.css]
-pattern = "**/{*.less,*.scss,*.css}"
+pattern = "src/{*.less,*.scss,*.css}"
   [languages.css.languageServer]
 start = "vscode-css-language-server --stdio"
     [languages.css.languageServer.configuration.css]
