@@ -1,11 +1,11 @@
 {
-  "name": "notepad",
-  "short_name": "notepad",
+  "name": "Idenma - Write Well",
+  "short_name": "idenma",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "theme_color": "#d87768",
   "icons": [
     {
       "src": "/assets/icons/android-chrome-192x192.png",

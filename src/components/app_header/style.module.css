@@ -34,7 +34,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 400px) {
   .logo h1 {
     display: none;
   }

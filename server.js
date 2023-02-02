@@ -5,7 +5,7 @@ const port = 80
 
 app.use(express.static("build"));
 app.use(function(req, res, next) {
-  console.log(req.url);
+  console.log("Failed to load " + req.url);
   if (req.accepts('html')) {
     res.send(fs.readFile);
     return;

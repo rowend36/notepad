@@ -24,6 +24,7 @@ const mySchema = new Schema({
   marks: schema.spec.marks,
 });
 
+
 const Notepad = () => {
   const ref = useRef();
   const dispatch = useAppData().dispatch;
@@ -43,6 +44,9 @@ const Notepad = () => {
           schema: mySchema,
         }),
       });
+      return () => {
+        view.destroy()
+      }
     }
   }, []);
   return <div className={style.notepad} ref={ref} />;

@@ -17,7 +17,7 @@ const Header = () => {
           height="32"
           width="32"
         />
-        <h1>Notepad</h1>
+        <h1>idenma</h1>
       </a>
       <span class={style.logo}>File size: {prettyBytes(fileSize)}</span>
       {/* <nav>
