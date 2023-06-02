@@ -62,8 +62,8 @@ const persist = (save, load, schema, initialDoc, subscribe = () => { }) => {
 
 export const locationStore = (schema, initialDoc) =>
   persist(
-    (e) => (location.hash = e),
-    () => location.hash && location.hash.slice(1),
+    (e) => (location.hash = e.replaceAll("/","_").replaceAll("+","-")),
+    () => location.hash && location.hash.slice(1).replaceAll("_","/").replaceAll("-","+"),
     schema,
     initialDoc,
     (cb) => {
