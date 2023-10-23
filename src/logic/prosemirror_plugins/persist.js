@@ -60,15 +60,17 @@ const persist = (save, load, schema, initialDoc, subscribe = () => { }) => {
   return [saveDoc];
 };
 
+const unsafe = e => e.replaceAll("_","/").replaceAll("-","+");
+const safe = e => e.replaceAll("/","_").replaceAll("+","-");
 export const locationStore = (schema, initialDoc) =>
   persist(
-    (e) => (location.hash = e.replaceAll("/","_").replaceAll("+","-")),
-    () => location.hash && location.hash.slice(1).replaceAll("_","/").replaceAll("-","+"),
+    (e) => (location.hash = safe(e)),
+    () => location.hash && unsafe(location.hash.slice(1)),
     schema,
     initialDoc,
     (cb) => {
       const m = () => {
-        cb(location.hash && location.hash.slice(1))
+        cb(location.hash && unsafe(location.hash.slice(1)))
       }
       window.addEventListener("hashchange", m);
       return () => {
